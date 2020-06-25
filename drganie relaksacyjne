@@ -1,0 +1,25 @@
+% Przedmiot: Techniki Obliczeniowe
+% Kierunek studiów: Mechatronika
+% Semestr: 2
+% Rok akademicki: 2019/2020
+% Data (dzień-miesiąc-rok): <<25-06-2020>>
+% Imię:             <<Dawid>>
+% Nazwisko:         <<Schmidt>>
+% Numer albumu ZUT: <<46766>>
+
+
+
+q = [0:10];
+q = q(:);
+    for(x=1:10)
+        q(x);
+        for(t=0:0.1:1)
+            q(x)= exp(-t)*(exp(2*t)-exp(-2*t));
+        end
+    end
+    a = 5; 
+g = 7; 
+t = 0:0.01:1; 
+q = a*exp(-g*t).*sinh(a*t); 
+plot(t,q)
+
